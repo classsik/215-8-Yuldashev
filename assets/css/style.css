@@ -1,0 +1,502 @@
+/* Подключаем шрифт Roboto */
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('../fonts/RobotoCondensed-Regular.ttf');
+    font-weight: 400;
+}
+
+/* Сбрасываем стили */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed';
+}
+
+body {
+    overscroll-behavior: none;
+}
+
+/* _________ Стили для шапки ___________ */
+.header {
+    height: 60px;
+    background: #373A3C;
+}
+
+/* Контейнер шапки */
+.header__inner {
+    max-width: 1070px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+}
+
+.header__menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu-item_dropdown {
+    margin-right: 24px;
+}
+
+.header__menu-item {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.header__menu-item_active {
+    color: #fff;
+}
+
+.header__menu-item_dropdown::after {
+    content: url('../img/dropdown.svg');
+    margin-left: 15px;
+    position: relative;
+    top: -2px;
+}
+
+.header__input {
+    width: 210px;
+    height: 38px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    margin-left: 40px;
+    padding: 0 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #435766;
+    margin-right: 30px;
+}
+
+.header__login {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.header__login-dropdown {
+    margin-left: 6px;
+}
+
+.header__login-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ________ Стили для второй секции __________ */
+.hero {
+    height: 648px;
+    background: url('../img/hero-bg.png');
+    position: relative;
+}
+
+/* Контейнер второй секции */
+.hero__inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.hero__inner-right {
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero__title {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+.hero__subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.hero__button-green {
+    padding: 9px 27px;
+    background: #8DD83D;
+    border-radius: 4px;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-right: 13px;
+}
+
+.hero__button-gray {
+    padding: 9px 27px;
+    background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+    border-radius: 4px;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.hero__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 135px;
+}
+
+.hero__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 135px;
+}
+
+.hero__indicators-wrapper {
+    position: absolute;
+    bottom: 43px;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+}
+
+.hero__indicators {
+    display: flex;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.hero__indicator {
+    background: rgba(255, 255, 255, 0.0001);
+    border: 1px solid #8DD83D;
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+.hero__indicator_active {
+    background: #8DD83D;
+}
+
+
+/* _________ Стили для третьей секции ___________ */
+.products {
+    background: radial-gradient(100% 100% at 50% 0%, #686C6F 0%, #373A3C 100%);
+    padding: 64px 0 162px 0;
+}
+
+/* Контейнер третьей секции */
+.products__inner {
+    margin: 0 auto;
+    max-width: 1080px;
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.products__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products__logo {
+    margin-bottom: 16px;
+}
+
+.products__title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+}
+
+.products__subtitle {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 42px;
+    color: #FFFFFF;
+    margin-bottom: 43px;
+}
+
+.products__card {
+    display: flex;
+    max-width: 320px;
+    height: 420px;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid #8DD83D;
+    border-radius: 4px;
+}
+
+.products__card-content {
+    text-align: left;
+    padding: 22px 22px 27px 22px;
+}
+
+.products__card-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #435766;
+    margin-bottom: 13px;
+}
+
+.products__card-subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #435766;
+    margin-bottom: 40px;
+}
+
+.products__card-link {
+    width: 100%;
+    height: 60px;
+    background: #8DD83D;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+
+/* ________ Стили для четвертой секции _________ */
+.design {
+    height: 480px;
+    position: relative;
+}
+
+.design__bg {
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Контейнер четвертой секции */
+.design__inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.design__title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.design__text {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.design__button-gray {
+    padding: 20px 52px;
+    border: none;
+    background: linear-gradient(180deg, #686C6F 0%, #373A3C 100%);
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.design__button-green {
+    padding: 20px 52px;
+    border: none;
+    background: #8DD83D;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+
+/* _______ Стили для подвала ________ */
+.footer {
+    background: #373A3C;
+    padding: 58px 0 20px 0;
+}
+
+/* Контейнер подвала */
+.footer__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.footer__language {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.footer__copyright {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+}
+
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.footer__column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer__column-title {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #7DD42F;
+    margin-bottom: 35px;
+}
+
+.footer__column-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer__column-link:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.footer__column-socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+/* Адаптив под 1024px */
+@media (max-width: 1024px) {
+    .products__cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero__inner {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Адаптив под 768px и менее */
+@media (max-width: 768px) {
+
+    .header__menu,
+    .header__input {
+        display: none;
+    }
+
+    .design__inner {
+        text-align: center;
+    }
+
+    .design__buttons {
+        flex-wrap: wrap;
+    }
+
+    .design__button-gray {
+        margin-bottom: 20px;
+    }
+
+    .footer__top {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer__column {
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer__column-socials {
+        justify-content: center;
+    }
+}
